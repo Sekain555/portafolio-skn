@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
+import { About } from "@/components/about";
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
       <Navbar />
       <main className="flex-grow">
         <Hero />
-        <div id="sobre-mi" className="min-h-screen py-32"></div>
+        <About />
         <div id="habilidades" className="min-h-screen py-32"></div>
         <div id="proyectos" className="min-h-screen py-32"></div>
         <div id="servicios" className="min-h-screen py-32"></div>
