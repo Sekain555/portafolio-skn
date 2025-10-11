@@ -1,25 +1,18 @@
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
-import { HeroSection } from "@/components/sections/hero-section";
-import { AboutSection } from "@/components/sections/about-section";
-import { SkillsSection } from "@/components/sections/skills-section";
-import { ProjectsSection } from "@/components/sections/projects-section";
-import { ServicesSection } from "@/components/sections/services-section";
-import { ContactSection } from "@/components/sections/contact-section";
+import { Navbar } from "@/components/navbar";
+import { Hero } from "@/components/hero";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      <Navbar />
       <main className="flex-grow">
-        <HeroSection />
-        <AboutSection />
-        <SkillsSection />
-        <ProjectsSection />
-        <ServicesSection />
-        <ContactSection />
+        <Hero />
+        <div id="sobre-mi" className="min-h-screen py-32"></div>
+        <div id="habilidades" className="min-h-screen py-32"></div>
+        <div id="proyectos" className="min-h-screen py-32"></div>
+        <div id="servicios" className="min-h-screen py-32"></div>
+        <div id="contacto" className="min-h-screen py-32"></div>
       </main>
-      <Footer />
     </div>
   );
 }

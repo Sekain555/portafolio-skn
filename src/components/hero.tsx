@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { ThreadsIcon } from "@/components/icons/threads";
 
 const socialLinks = [
@@ -21,29 +21,30 @@ const socialLinks = [
   },
 ];
 
-export function HeroSection() {
+export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative w-full h-[calc(100vh-5rem)] min-h-[500px] flex items-center justify-center"
+      className="relative w-full h-screen min-h-[700px] flex items-center justify-center"
     >
       <div className="absolute inset-0 bg-grid-slate-900/[0.04] bg-[bottom_1px_center] dark:bg-grid-slate-400/[0.05] dark:bg-bottom dark:border-b dark:border-slate-100/5 [mask-image:linear-gradient(to_bottom,transparent,black)]"></div>
+       <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
       <div className="container mx-auto px-4 md:px-6 text-center">
-        <div className="relative z-10">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">
-            Víctor Sepúlveda
+        <div className="relative z-10 max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight">
+            Víctor Sepúlveda (Sekain)
           </h1>
-          <p className="mt-4 md:mt-6 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
-            Full-Stack Developer crafting digital solutions that bridge ideas and reality.
+          <p className="mt-4 md:mt-6 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground">
+            Ingeniero y programador chileno que fusiona la informática con la creatividad del arte, la música y el desarrollo de sistemas.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
+          <div className="mt-8 flex flex-wrap justify-center items-center gap-4">
             {socialLinks.map((link) => (
               <Button
                 key={link.label}
                 variant="outline"
                 size="icon"
                 asChild
-                className="w-12 h-12"
+                className="w-12 h-12 rounded-full"
               >
                 <Link
                   href={link.href}
@@ -55,9 +56,9 @@ export function HeroSection() {
                 </Link>
               </Button>
             ))}
-             <Button size="lg" asChild>
+             <Button size="lg" asChild className="rounded-full">
               <Link href="#contacto">
-                <Mail className="mr-2 h-5 w-5" /> Contact Me
+                Contáctame
               </Link>
             </Button>
           </div>

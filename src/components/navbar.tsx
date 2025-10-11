@@ -8,15 +8,15 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "#inicio", label: "Home" },
-  { href: "#sobre-mi", label: "About" },
-  { href: "#habilidades", label: "Skills" },
-  { href: "#proyectos", label: "Projects" },
-  { href: "#servicios", label: "Services" },
-  { href: "#contacto", label: "Contact" },
+  { href: "#inicio", label: "Inicio" },
+  { href: "#sobre-mi", label: "Sobre mí" },
+  { href: "#habilidades", label: "Habilidades" },
+  { href: "#proyectos", label: "Proyectos" },
+  { href: "#servicios", label: "Servicios" },
+  { href: "#contacto", label: "Contacto" },
 ];
 
-export function Header() {
+export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -40,7 +40,7 @@ export function Header() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="#inicio" className="flex items-center gap-2 font-bold text-lg">
           <Code className="h-6 w-6 text-primary" />
-          <span>Víctor Sepúlveda</span>
+          <span>Sekain</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
@@ -55,6 +55,9 @@ export function Header() {
         </nav>
         <div className="flex items-center gap-2">
           <ThemeToggle />
+          <Button asChild className="hidden md:flex rounded-full">
+            <a href="/cv.pdf" download>Descargar CV</a>
+          </Button>
           <Button
             variant="ghost"
             size="icon"
@@ -79,6 +82,9 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
+            <Button asChild className="w-full rounded-full mt-4">
+              <a href="/cv.pdf" download>Descargar CV</a>
+            </Button>
           </nav>
         </div>
       )}
