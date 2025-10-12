@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { SocialLinks } from '@/components/social-links';
 
 const navLinks = [
-  { href: '#inicio', label: 'Inicio' },
-  { href: '#sobre-mi', label: 'Sobre mí' },
-  { href: '#habilidades', label: 'Habilidades' },
-  { href: '#proyectos', label: 'Proyectos' },
-  { href: '#servicios', label: 'Servicios' },
-  { href: '#contacto', label: 'Contacto' },
+  { href: '/#inicio', label: 'Inicio' },
+  { href: '/#sobre-mi', label: 'Sobre mí' },
+  { href: '/#habilidades', label: 'Habilidades' },
+  { href: '/#proyectos', label: 'Proyectos' },
+  { href: '/#servicios', label: 'Servicios' },
+  { href: '/#contacto', label: 'Contacto' },
 ];
 
 export function Footer() {

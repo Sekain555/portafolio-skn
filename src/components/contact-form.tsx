@@ -18,7 +18,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
-import { CheckCircle, Loader2 } from "lucide-react";
+import { CheckCircle, Loader2, AlertCircle } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -132,7 +132,7 @@ export function ContactForm() {
             />
 
             {submitStatus === "success" && (
-              <Alert variant="default" className="bg-green-100 dark:bg-green-900/20 border-green-500/50 text-green-800 dark:text-green-300 [&>svg]:text-green-600 dark:[&>svg]:text-green-400" role="status">
+              <Alert variant="default" className="border-green-500/50 text-green-800 dark:text-green-300 [&>svg]:text-green-600 dark:[&>svg]:text-green-400" role="status" aria-live="polite">
                 <CheckCircle className="h-4 w-4" />
                 <AlertTitle>¡Mensaje enviado!</AlertTitle>
                 <AlertDescription>
@@ -142,8 +142,9 @@ export function ContactForm() {
             )}
 
             {submitStatus === "error" && (
-              <Alert variant="destructive" role="alert">
-                <AlertTitle>Error</AlertTitle>
+              <Alert variant="destructive" role="alert" aria-live="assertive">
+                <AlertCircle className="h-4 w-4" />
+                <AlertTitle>Error al enviar</AlertTitle>
                 <AlertDescription>
                   Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.
                 </AlertDescription>
