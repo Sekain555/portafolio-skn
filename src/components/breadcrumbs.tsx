@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ChevronRight } from "lucide-react";
+import { FaChevronRight } from "react-icons/fa";
 import { cn } from "@/lib/utils";
 
 type BreadcrumbItem = {
@@ -18,7 +18,7 @@ export function Breadcrumbs({ items, className }: BreadcrumbsProps) {
       <ol className="flex items-center gap-2 text-sm text-muted-foreground">
         {items.map((item, index) => (
           <li key={item.href} className="flex items-center gap-2">
-            {index > 0 && <ChevronRight className="h-4 w-4" />}
+            {index > 0 && <FaChevronRight className="h-4 w-4" />}
             <Link
               href={item.href}
               className={cn(

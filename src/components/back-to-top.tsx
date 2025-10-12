@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { ArrowUp } from "lucide-react";
+import { FaArrowUp } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -40,7 +40,7 @@ export function BackToTopButton() {
       )}
       aria-label="Volver arriba"
     >
-      <ArrowUp className="h-6 w-6" />
+      <FaArrowUp className="h-6 w-6" />
     </Button>
   );
 }

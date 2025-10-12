@@ -1,96 +1,86 @@
-import {
-  BrainCircuit,
-  Cog,
-  Leaf,
-  Server,
-  Monitor,
-  Database,
-  GitBranch,
-  Cloud,
-  Code,
-} from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
-  PythonIcon,
-  FastApiIcon,
-  FlaskIcon,
-  MySqlIcon,
-  FirebaseIcon,
-  AngularIcon,
-  IonicIcon,
-  VueIcon,
-  VuetifyIcon,
-  ArduinoIcon,
-  TailwindIcon,
-  JwtIcon,
-  CaddyIcon,
-  NextjsIcon,
-  FigmaIcon,
-  GitIcon,
-  LvglIcon,
-} from "./icons";
+  FaBrain,
+  FaCog,
+  FaLeaf,
+  FaServer,
+  FaDesktop,
+  FaDatabase,
+  FaGitAlt,
+  FaCloud,
+  FaCode,
+  FaPython,
+  FaFlask,
+  FaVuejs,
+  FaAngular,
+  FaFigma,
+  FaReact,
+  FaKey,
+  FaCss3Alt
+} from "react-icons/fa";
+import { SiFastapi, SiMysql, SiFirebase, SiIonic, SiVuetify, SiArduino, SiNextdotjs } from "react-icons/si";
 
 const skillsData = {
   main: {
     title: "Habilidades principales",
-    icon: <BrainCircuit className="h-8 w-8 text-primary" />,
+    icon: <FaBrain className="h-8 w-8 text-primary" />,
     description: "Tecnologías que domino y uso activamente en proyectos reales.",
     categories: [
       {
         title: "Backend",
-        icon: <Server className="h-5 w-5 mr-2" />,
+        icon: <FaServer className="h-5 w-5 mr-2" />,
         skills: [
-          { name: "Python", icon: <PythonIcon className="h-5 w-5" /> },
-          { name: "FastAPI", icon: <FastApiIcon className="h-5 w-5" /> },
-          { name: "Flask", icon: <FlaskIcon className="h-5 w-5" /> },
-          { name: "MySQL/MariaDB", icon: <MySqlIcon className="h-5 w-5" /> },
-          { name: "Firebase", icon: <FirebaseIcon className="h-5 w-5" /> },
+          { name: "Python", icon: <FaPython className="h-5 w-5" /> },
+          { name: "FastAPI", icon: <SiFastapi className="h-5 w-5" /> },
+          { name: "Flask", icon: <FaFlask className="h-5 w-5" /> },
+          { name: "MySQL/MariaDB", icon: <SiMysql className="h-5 w-5" /> },
+          { name: "Firebase", icon: <SiFirebase className="h-5 w-5" /> },
         ],
       },
       {
         title: "Frontend",
-        icon: <Monitor className="h-5 w-5 mr-2" />,
+        icon: <FaDesktop className="h-5 w-5 mr-2" />,
         skills: [
-          { name: "Angular", icon: <AngularIcon className="h-5 w-5" /> },
-          { name: "Ionic", icon: <IonicIcon className="h-5 w-5" /> },
-          { name: "Vue 3", icon: <VueIcon className="h-5 w-5" /> },
-          { name: "Vuetify", icon: <VuetifyIcon className="h-5 w-5" /> },
+          { name: "Angular", icon: <FaAngular className="h-5 w-5" /> },
+          { name: "Ionic", icon: <SiIonic className="h-5 w-5" /> },
+          { name: "Vue 3", icon: <FaVuejs className="h-5 w-5" /> },
+          { name: "Vuetify", icon: <SiVuetify className="h-5 w-5" /> },
         ],
       },
       {
         title: "Infraestructura",
-        icon: <Cloud className="h-5 w-5 mr-2" />,
+        icon: <FaCloud className="h-5 w-5 mr-2" />,
         skills: [
-          { name: "Git / GitHub", icon: <GitIcon className="h-5 w-5" /> },
-          { name: "Windows Server", icon: <Server className="h-5 w-5" /> },
-          { name: "Firebase Hosting", icon: <FirebaseIcon className="h-5 w-5" /> },
+          { name: "Git / GitHub", icon: <FaGitAlt className="h-5 w-5" /> },
+          { name: "Windows Server", icon: <FaServer className="h-5 w-5" /> },
+          { name: "Firebase Hosting", icon: <SiFirebase className="h-5 w-5" /> },
         ],
       },
     ],
   },
   complementary: {
     title: "Herramientas complementarias",
-    icon: <Cog className="h-8 w-8 text-primary" />,
+    icon: <FaCog className="h-8 w-8 text-primary" />,
     description: "Tecnologías que manejo a nivel intermedio o uso como soporte.",
     skills: [
-      { name: "Caddy", icon: <CaddyIcon className="h-5 w-5" /> },
-      { name: "JWT Auth", icon: <JwtIcon className="h-5 w-5" /> },
-      { name: "SquareLine Studio", icon: <LvglIcon className="h-5 w-5" /> },
-      { name: "Arduino IDE", icon: <ArduinoIcon className="h-5 w-5" /> },
-      { name: "Tailwind CSS", icon: <TailwindIcon className="h-5 w-5" /> },
-      { name: "Markdown", icon: <Code className="h-5 w-5" /> },
+      { name: "Caddy", icon: <FaServer className="h-5 w-5" /> },
+      { name: "JWT Auth", icon: <FaKey className="h-5 w-5" /> },
+      { name: "SquareLine Studio", icon: <FaDesktop className="h-5 w-5" /> },
+      { name: "Arduino IDE", icon: <SiArduino className="h-5 w-5" /> },
+      { name: "Tailwind CSS", icon: <FaCss3Alt className="h-5 w-5" /> },
+      { name: "Markdown", icon: <FaCode className="h-5 w-5" /> },
     ],
   },
   learning: {
     title: "Exploración y aprendizaje",
-    icon: <Leaf className="h-8 w-8 text-primary" />,
+    icon: <FaLeaf className="h-8 w-8 text-primary" />,
     description: "Tecnologías que estoy integrando o explorando actualmente.",
     skills: [
-      { name: "Next.js", icon: <NextjsIcon className="h-5 w-5" /> },
-      { name: "Firebase Studio", icon: <FirebaseIcon className="h-5 w-5" /> },
-      { name: "Figma", icon: <FigmaIcon className="h-5 w-5" /> },
-      { name: "Integraciones IoT", icon: <GitBranch className="h-5 w-5" /> },
+      { name: "Next.js", icon: <SiNextdotjs className="h-5 w-5" /> },
+      { name: "Firebase Studio", icon: <SiFirebase className="h-5 w-5" /> },
+      { name: "Figma", icon: <FaFigma className="h-5 w-5" /> },
+      { name: "Integraciones IoT", icon: <FaCode className="h-5 w-5" /> },
     ],
   },
 };
@@ -172,9 +162,9 @@ export function Skills() {
               <CardHeader className="flex flex-row items-start gap-4">
                 {skillsData.complementary.icon}
                 <div>
-                  <CardTitle className="text-2xl">
+                  <h4 className="text-2xl font-semibold leading-none tracking-tight">
                     {skillsData.complementary.title}
-                  </CardTitle>
+                  </h4>
                    <p className="text-muted-foreground mt-1">
                     {skillsData.complementary.description}
                   </p>
@@ -201,9 +191,9 @@ export function Skills() {
               <CardHeader className="flex flex-row items-start gap-4">
                 {skillsData.learning.icon}
                 <div>
-                  <CardTitle className="text-2xl">
+                  <h4 className="text-2xl font-semibold leading-none tracking-tight">
                     {skillsData.learning.title}
-                  </CardTitle>
+                  </h4>
                    <p className="text-muted-foreground mt-1">
                     {skillsData.learning.description}
                   </p>

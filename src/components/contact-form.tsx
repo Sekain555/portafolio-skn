@@ -18,7 +18,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
-import { CheckCircle, Loader2, AlertCircle } from "lucide-react";
+import { FaCheckCircle, FaSpinner, FaExclamationCircle } from "react-icons/fa";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -132,8 +132,8 @@ export function ContactForm() {
             />
 
             {submitStatus === "success" && (
-              <Alert variant="default" className="border-green-500/50 text-green-800 dark:text-green-300 [&>svg]:text-green-600 dark:[&>svg]:text-green-400" role="status" aria-live="polite">
-                <CheckCircle className="h-4 w-4" />
+              <Alert variant="default" className="border-green-500/50 bg-green-50 text-green-800 dark:bg-green-950 dark:text-green-300 [&>svg]:text-green-600 dark:[&>svg]:text-green-400" role="status" aria-live="polite">
+                <FaCheckCircle className="h-4 w-4" />
                 <AlertTitle>¡Mensaje enviado!</AlertTitle>
                 <AlertDescription>
                   Gracias por contactarme. Te responderé a la brevedad.
@@ -143,7 +143,7 @@ export function ContactForm() {
 
             {submitStatus === "error" && (
               <Alert variant="destructive" role="alert" aria-live="assertive">
-                <AlertCircle className="h-4 w-4" />
+                <FaExclamationCircle className="h-4 w-4" />
                 <AlertTitle>Error al enviar</AlertTitle>
                 <AlertDescription>
                   Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.
@@ -154,7 +154,7 @@ export function ContactForm() {
             <Button type="submit" disabled={isSubmitting} className="w-full">
               {isSubmitting ? (
                 <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  <FaSpinner className="mr-2 h-4 w-4 animate-spin" />
                   Enviando...
                 </>
               ) : (

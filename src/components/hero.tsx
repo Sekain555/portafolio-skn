@@ -1,23 +1,17 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin } from "lucide-react";
-import { ThreadsIcon } from "@/components/icons/threads";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const socialLinks = [
   {
-    href: "https://github.com/sekain",
-    icon: Github,
+    href: "https://github.com/Sekain",
+    icon: FaGithub,
     label: "GitHub",
   },
   {
     href: "https://www.linkedin.com/in/victor-sepulveda-developer/",
-    icon: Linkedin,
+    icon: FaLinkedin,
     label: "LinkedIn",
-  },
-  {
-    href: "https://www.threads.net/@sekain.dev",
-    icon: ThreadsIcon,
-    label: "Threads",
   },
 ];
 
@@ -33,10 +27,10 @@ export function Hero() {
       <div className="container mx-auto px-4 md:px-6 text-center">
         <div className="relative z-10 max-w-4xl mx-auto">
           <h1 id="hero-title" className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight">
-            Víctor Sepúlveda (Sekain)
+            Víctor Sepúlveda Brito (Sekain)
           </h1>
           <p className="mt-4 md:mt-6 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground">
-            Ingeniero y programador chileno que fusiona la informática con la creatividad del arte, la música y el desarrollo de sistemas.
+          Programador e ingeniero chileno que convierte ideas en sistemas funcionales, fusionando lógica, diseño y experiencia de usuario.
           </p>
           <div className="mt-8 flex flex-wrap justify-center items-center gap-4">
             {socialLinks.map((link) => (

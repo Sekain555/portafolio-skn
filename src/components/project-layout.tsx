@@ -3,12 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowLeft,
-  ArrowRight,
-  ChevronRight,
-  Github,
-  Globe,
-} from "lucide-react";
+  FaArrowLeft,
+  FaArrowRight,
+  FaGithub,
+  FaGlobe,
+} from "react-icons/fa";
 import type { Project } from "@/lib/projects";
 import { getProjectNeighbors } from "@/lib/projects";
 import { Badge } from "@/components/ui/badge";
@@ -36,14 +35,14 @@ export function ProjectLayout({ project }: { project: Project }) {
           {project.links.repo && (
             <Button variant="outline" asChild>
               <Link href={project.links.repo} target="_blank">
-                <Github className="mr-2 h-4 w-4" /> Repositorio
+                <FaGithub className="mr-2 h-4 w-4" /> Repositorio
               </Link>
             </Button>
           )}
           {project.links.demo && (
             <Button asChild>
               <Link href={project.links.demo} target="_blank">
-                <Globe className="mr-2 h-4 w-4" /> Ver Demo
+                <FaGlobe className="mr-2 h-4 w-4" /> Ver Demo
               </Link>
             </Button>
           )}
@@ -94,14 +93,14 @@ export function ProjectLayout({ project }: { project: Project }) {
         <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
            <Button variant="outline" asChild>
             <Link href="/#proyectos">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Volver a Proyectos
+              <FaArrowLeft className="mr-2 h-4 w-4" /> Volver a Proyectos
             </Link>
           </Button>
           <div className="flex gap-4">
             {prev && (
               <Button variant="ghost" asChild>
                 <Link href={`/projects/${prev.slug}`}>
-                  <ArrowLeft className="mr-2 h-4 w-4" />
+                  <FaArrowLeft className="mr-2 h-4 w-4" />
                   Anterior
                 </Link>
               </Button>
@@ -109,7 +108,7 @@ export function ProjectLayout({ project }: { project: Project }) {
             {next && (
               <Button variant="ghost" asChild>
                 <Link href={`/projects/${next.slug}`}>
-                  Siguiente <ArrowRight className="ml-2 h-4 w-4" />
+                  Siguiente <FaArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             )}

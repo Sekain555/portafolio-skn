@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { getProjects } from "@/lib/projects";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { ArrowRight } from "lucide-react";
+import { FaArrowRight } from "react-icons/fa";
 
 export function Projects() {
   const projects = getProjects();
@@ -74,7 +74,7 @@ export function Projects() {
                 <div className="mt-auto">
                    <Button asChild className="w-full">
                     <Link href={`/projects/${project.slug}`}>
-                      Ver más <ArrowRight className="ml-2 h-4 w-4" />
+                      Ver más <FaArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                 </div>

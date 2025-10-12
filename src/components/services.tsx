@@ -11,41 +11,41 @@ import {
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import {
-  Globe,
-  Cpu,
-  Server,
-  FileText,
-  Rocket,
-  ArrowRight,
-} from 'lucide-react';
+  FaGlobe,
+  FaMicrochip,
+  FaServer,
+  FaFileAlt,
+  FaRocket,
+  FaArrowRight,
+} from 'react-icons/fa';
 
 const servicesData = [
   {
-    icon: <Globe className="h-10 w-10 text-primary" />,
+    icon: <FaGlobe className="h-10 w-10 text-primary" />,
     title: 'Desarrollo Web y Móvil',
     description: 'Aplicaciones modernas, responsivas y optimizadas.',
     tags: ['Angular', 'Ionic', 'Vue', 'Vite', 'Vuetify'],
   },
   {
-    icon: <Cpu className="h-10 w-10 text-primary" />,
+    icon: <FaMicrochip className="h-10 w-10 text-primary" />,
     title: 'Integraciones IoT',
     description: 'Conexión hardware–software con ESP32 y Arduino.',
     tags: ['ESP32', 'Arduino', 'UART/I2C/SPI'],
   },
   {
-    icon: <Server className="h-10 w-10 text-primary" />,
+    icon: <FaServer className="h-10 w-10 text-primary" />,
     title: 'APIs y Automatización',
     description: 'Backends escalables y conectividad entre sistemas.',
     tags: ['Python', 'FastAPI', 'Flask', 'REST/JSON'],
   },
   {
-    icon: <FileText className="h-10 w-10 text-primary" />,
+    icon: <FaFileAlt className="h-10 w-10 text-primary" />,
     title: 'Consultoría Técnica',
     description: 'Análisis, documentación y planificación de sistemas.',
     tags: ['Arquitectura', 'Documentación', 'Roadmap'],
   },
   {
-    icon: <Rocket className="h-10 w-10 text-primary" />,
+    icon: <FaRocket className="h-10 w-10 text-primary" />,
     title: 'Soporte e Innovación',
     description: 'Mejora de rendimiento y evolución de proyectos existentes.',
     tags: ['Refactor', 'Optimización', 'Deploy'],
@@ -98,7 +98,7 @@ export function Services() {
               <CardFooter>
                 <Button asChild className="w-full">
                   <Link href="#contacto">
-                    Solicitar <ArrowRight className="ml-2 h-4 w-4" />
+                    Solicitar <FaArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </CardFooter>

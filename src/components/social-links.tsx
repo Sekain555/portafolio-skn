@@ -1,27 +1,27 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail } from "lucide-react";
-import { ThreadsIcon } from "@/components/icons/threads";
+import { FaGithub, FaLinkedin, FaThreads, FaEnvelope } from "react-icons/fa6";
+
 
 const socialLinksData = [
   {
     href: "https://github.com/sekain",
-    icon: Github,
+    icon: FaGithub,
     label: "GitHub",
   },
   {
     href: "https://www.linkedin.com/in/victor-sepulveda-developer/",
-    icon: Linkedin,
+    icon: FaLinkedin,
     label: "LinkedIn",
   },
   {
     href: "https://www.threads.net/@sekain.dev",
-    icon: ThreadsIcon,
+    icon: FaThreads,
     label: "Threads",
   },
   {
     href: "mailto:victor.sepulveda.c@outlook.com",
-    icon: Mail,
+    icon: FaEnvelope,
     label: "Correo",
   }
 ];

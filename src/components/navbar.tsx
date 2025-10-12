@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Code } from "lucide-react";
+import { FaBars, FaTimes, FaCode } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { cn } from "@/lib/utils";
@@ -61,7 +61,7 @@ export function Navbar() {
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="#inicio" className="flex items-center gap-2 font-bold text-lg">
-          <Code className="h-6 w-6 text-primary" />
+          <FaCode className="h-6 w-6 text-primary" />
           <span>Sekain</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
@@ -90,7 +90,7 @@ export function Navbar() {
             className="md:hidden"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isOpen ? <FaTimes className="h-6 w-6" /> : <FaBars className="h-6 w-6" />}
             <span className="sr-only">Toggle menu</span>
           </Button>
         </div>
