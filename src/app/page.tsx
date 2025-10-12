@@ -3,6 +3,8 @@ import { Hero } from "@/components/hero";
 import { About } from "@/components/about";
 import { Skills } from "@/components/skills";
 import { Projects } from "@/components/projects";
+import { Services } from "@/components/services";
+import { Contact } from "@/components/contact";
 
 export default function Home() {
   return (
@@ -13,8 +15,8 @@ export default function Home() {
         <About />
         <Skills />
         <Projects />
-        <div id="servicios" className="min-h-screen py-32"></div>
-        <div id="contacto" className="min-h-screen py-32"></div>
+        <Services />
+        <Contact />
       </main>
     </div>
   );
