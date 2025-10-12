@@ -25,7 +25,7 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative w-full h-screen min-h-[700px] flex items-center justify-center"
+      className="relative w-full h-screen min-h-[700px] flex items-center justify-center scroll-mt-20"
     >
       <div className="absolute inset-0 bg-grid-slate-900/[0.04] bg-[bottom_1px_center] dark:bg-grid-slate-400/[0.05] dark:bg-bottom dark:border-b dark:border-slate-100/5 [mask-image:linear-gradient(to_bottom,transparent,black)]"></div>
        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>

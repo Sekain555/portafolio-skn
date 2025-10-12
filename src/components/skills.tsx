@@ -28,6 +28,7 @@ import {
   NextjsIcon,
   FigmaIcon,
   GitIcon,
+  LvglIcon,
 } from "./icons";
 
 const skillsData = {
@@ -75,7 +76,7 @@ const skillsData = {
     skills: [
       { name: "Caddy", icon: <CaddyIcon className="h-5 w-5" /> },
       { name: "JWT Auth", icon: <JwtIcon className="h-5 w-5" /> },
-      { name: "SquareLine Studio", icon: <Code className="h-5 w-5" /> },
+      { name: "SquareLine Studio", icon: <LvglIcon className="h-5 w-5" /> },
       { name: "Arduino IDE", icon: <ArduinoIcon className="h-5 w-5" /> },
       { name: "Tailwind CSS", icon: <TailwindIcon className="h-5 w-5" /> },
       { name: "Markdown", icon: <Code className="h-5 w-5" /> },
@@ -128,7 +129,7 @@ export function Skills() {
     <section
       id="habilidades"
       aria-labelledby="habilidades-title"
-      className="py-24 sm:py-32 bg-secondary/50"
+      className="py-24 sm:py-32 bg-secondary/50 scroll-mt-20"
     >
       <div className="container mx-auto px-4 md:px-6 max-w-5xl">
         <div className="text-center mb-16">

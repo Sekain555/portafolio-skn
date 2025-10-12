@@ -19,14 +19,36 @@ const navLinks = [
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("#inicio");
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
+
+      let currentSection = "";
+      const sections = navLinks.map(link => document.getElementById(link.href.substring(1))).filter(s => s);
+
+      for (const section of sections) {
+        if (section) {
+           const rect = section.getBoundingClientRect();
+           if (rect.top <= 100 && rect.bottom >= 100) {
+             currentSection = `#${section.id}`;
+             break;
+           }
+        }
+      }
+      
+      if (currentSection) {
+        setActiveSection(currentSection);
+      }
     };
+
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); 
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
 
   return (
     <header
@@ -47,7 +69,11 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              aria-current={activeSection === link.href ? "page" : undefined}
+              className={cn(
+                "text-sm font-medium transition-colors hover:text-primary",
+                activeSection === link.href ? "text-primary" : "text-muted-foreground"
+              )}
             >
               {link.label}
             </Link>
@@ -76,7 +102,11 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-base font-medium text-muted-foreground transition-colors hover:text-primary"
+                aria-current={activeSection === link.href ? "page" : undefined}
+                className={cn(
+                  "text-base font-medium transition-colors hover:text-primary",
+                   activeSection === link.href ? "text-primary" : "text-muted-foreground"
+                )}
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}

@@ -17,7 +17,7 @@ export function Projects() {
     <section
       id="proyectos"
       aria-labelledby="proyectos-title"
-      className="py-24 sm:py-32"
+      className="py-24 sm:py-32 scroll-mt-20"
     >
       <div className="container mx-auto px-4 md:px-6 max-w-6xl">
         <div className="text-center mb-16">
