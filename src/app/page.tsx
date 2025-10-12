@@ -2,6 +2,7 @@ import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { About } from "@/components/about";
 import { Skills } from "@/components/skills";
+import { Projects } from "@/components/projects";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
         <Hero />
         <About />
         <Skills />
-        <div id="proyectos" className="min-h-screen py-32"></div>
+        <Projects />
         <div id="servicios" className="min-h-screen py-32"></div>
         <div id="contacto" className="min-h-screen py-32"></div>
       </main>

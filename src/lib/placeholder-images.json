@@ -1,28 +1,40 @@
 {
   "placeholderImages": [
     {
-      "id": "project-1",
-      "description": "A dashboard for a tech application.",
-      "imageUrl": "https://picsum.photos/seed/tech-dashboard/600/400",
-      "imageHint": "tech dashboard"
+      "id": "project-rucaray",
+      "description": "A dashboard for a tech support ticket system.",
+      "imageUrl": "https://picsum.photos/seed/rucaray-dashboard/600/400",
+      "imageHint": "support dashboard"
     },
     {
-      "id": "project-2",
-      "description": "A sleek mobile application interface.",
-      "imageUrl": "https://picsum.photos/seed/mobile-app/600/400",
-      "imageHint": "mobile app"
+      "id": "project-techflow",
+      "description": "A mobile app interface for a field service management platform.",
+      "imageUrl": "https://picsum.photos/seed/techflow-app/600/400",
+      "imageHint": "service app"
     },
     {
-      "id": "project-3",
-      "description": "An IoT device connected to the cloud.",
-      "imageUrl": "https://picsum.photos/seed/iot-device/600/400",
-      "imageHint": "iot device"
+      "id": "project-ride-in",
+      "description": "An IoT device for motorcycles connected to the cloud.",
+      "imageUrl": "https://picsum.photos/seed/ride-in-iot/600/400",
+      "imageHint": "motorcycle iot"
     },
     {
-      "id": "project-4",
-      "description": "A web application for data visualization.",
-      "imageUrl": "https://picsum.photos/seed/data-viz/600/400",
-      "imageHint": "data visualization"
+      "id": "project-contatrack",
+      "description": "A web application for accounting data visualization.",
+      "imageUrl": "https://picsum.photos/seed/contatrack-viz/600/400",
+      "imageHint": "accounting dashboard"
+    },
+    {
+      "id": "project-ride-in-subsystems",
+      "description": "An embedded system UI for a motorcycle console.",
+      "imageUrl": "https://picsum.photos/seed/ride-in-console/600/400",
+      "imageHint": "embedded ui"
+    },
+    {
+      "id": "project-elite7fc",
+      "description": "A concept UI for a fantasy football mobile game.",
+      "imageUrl": "https://picsum.photos/seed/elite7fc-concept/600/400",
+      "imageHint": "game ui"
     }
   ]
 }

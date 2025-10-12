@@ -15,3 +15,4 @@ export * from "./git";
 export * from "./jwt";
 export * from "./nextjs";
 export * from "./tailwind";
+export * from "./lvgl";
