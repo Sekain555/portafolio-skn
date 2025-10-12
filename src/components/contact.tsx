@@ -35,9 +35,6 @@ export function Contact() {
             <SocialLinks />
           </div>
         </div>
-         <p className="text-center text-sm text-muted-foreground mt-24">
-          – Víctor ‘Sekain’ Sepúlveda –
-        </p>
       </div>
     </section>
   );
