@@ -4,12 +4,12 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const socialLinks = [
   {
-    href: "https://github.com/Sekain",
+    href: "https://github.com/Sekain555",
     icon: FaGithub,
     label: "GitHub",
   },
   {
-    href: "https://www.linkedin.com/in/victor-sepulveda-developer/",
+    href: "https://www.linkedin.com/in/skn555",
     icon: FaLinkedin,
     label: "LinkedIn",
   },

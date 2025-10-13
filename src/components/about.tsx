@@ -13,7 +13,7 @@ export function About() {
             id="sobre-mi-title"
             className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl"
           >
-            Uniendo Código y Creatividad
+            Construyendo Soluciones con Propósito
           </h2>
           <blockquote className="mt-6 max-w-3xl mx-auto text-lg italic text-muted-foreground border-l-4 border-primary pl-4 text-left">
             “La tecnología, en su máxima expresión, es una forma de arte.”
@@ -21,22 +21,24 @@ export function About() {
         </div>
         <div className="mt-12 space-y-6 text-muted-foreground text-lg text-justify">
           <p>
-            Soy Víctor Sepúlveda, un ingeniero y programador chileno apasionado
-            por la intersección entre tecnología y creatividad. Mi viaje comenzó
-            con una curiosidad innata por entender cómo funcionan las cosas, y
-            esa misma curiosidad me impulsa hoy a construir soluciones
-            innovadoras y efectivas.
+            Soy Víctor Sepúlveda, ingeniero y programador chileno con una
+            profunda pasión por el desarrollo de sistemas y la innovación
+            tecnológica. Mi camino comenzó con la curiosidad de entender cómo
+            funcionan las cosas, y hoy esa misma curiosidad me impulsa a diseñar
+            soluciones que conecten eficiencia, lógica y experiencia humana.
           </p>
           <p>
-            Mi enfoque es transformar ideas en realidades tangibles, combinando
-            la precisión de la ingeniería con la expresividad del arte. Creo
-            firmemente que la tecnología es una herramienta poderosa para crear
-            experiencias significativas y resolver problemas reales.
+            Mi enfoque está en convertir ideas en sistemas funcionales, donde la
+            precisión técnica y la visión integral se combinan para crear
+            herramientas útiles, escalables y bien estructuradas. Creo que la
+            ingeniería no solo trata de código, sino de resolver problemas
+            reales con pensamiento crítico y claridad.
           </p>
           <p>
-            Más allá de mi trabajo, soy un entusiasta de la música, el anime y la
-            cultura digital. Estas pasiones alimentan mi creatividad y me
-            inspiran a abordar los desafíos desde perspectivas únicas.
+            Más allá del trabajo, disfruto explorar temas ligados a la cultura
+            digital, la música y el anime, que me inspiran a mantener una mente
+            abierta y adaptable frente a los cambios tecnológicos y humanos del
+            mundo moderno.
           </p>
         </div>
       </div>

@@ -20,6 +20,7 @@ import {
   FaCss3Alt
 } from "react-icons/fa";
 import { SiFastapi, SiMysql, SiFirebase, SiIonic, SiVuetify, SiArduino, SiNextdotjs } from "react-icons/si";
+import { TbSquareLetterS } from "react-icons/tb";
 
 const skillsData = {
   main: {
@@ -33,7 +34,6 @@ const skillsData = {
         skills: [
           { name: "Python", icon: <FaPython className="h-5 w-5" /> },
           { name: "FastAPI", icon: <SiFastapi className="h-5 w-5" /> },
-          { name: "Flask", icon: <FaFlask className="h-5 w-5" /> },
           { name: "MySQL/MariaDB", icon: <SiMysql className="h-5 w-5" /> },
           { name: "Firebase", icon: <SiFirebase className="h-5 w-5" /> },
         ],
@@ -44,8 +44,7 @@ const skillsData = {
         skills: [
           { name: "Angular", icon: <FaAngular className="h-5 w-5" /> },
           { name: "Ionic", icon: <SiIonic className="h-5 w-5" /> },
-          { name: "Vue 3", icon: <FaVuejs className="h-5 w-5" /> },
-          { name: "Vuetify", icon: <SiVuetify className="h-5 w-5" /> },
+          
         ],
       },
       {
@@ -53,9 +52,16 @@ const skillsData = {
         icon: <FaCloud className="h-5 w-5 mr-2" />,
         skills: [
           { name: "Git / GitHub", icon: <FaGitAlt className="h-5 w-5" /> },
-          { name: "Windows Server", icon: <FaServer className="h-5 w-5" /> },
           { name: "Firebase Hosting", icon: <SiFirebase className="h-5 w-5" /> },
         ],
+      },
+      {
+        title: "Embebido/Firmware",
+        icon: <FaCloud className="h-5 w-5 mr-2" />,
+        skills: [
+          { name: "Arduino", icon: <SiArduino className="h-5 w-5" /> },
+          { name: "SquareLine Studio", icon: <TbSquareLetterS className="h-5 w-5" />,}
+        ]
       },
     ],
   },
@@ -64,12 +70,7 @@ const skillsData = {
     icon: <FaCog className="h-8 w-8 text-primary" />,
     description: "Tecnologías que manejo a nivel intermedio o uso como soporte.",
     skills: [
-      { name: "Caddy", icon: <FaServer className="h-5 w-5" /> },
       { name: "JWT Auth", icon: <FaKey className="h-5 w-5" /> },
-      { name: "SquareLine Studio", icon: <FaDesktop className="h-5 w-5" /> },
-      { name: "Arduino IDE", icon: <SiArduino className="h-5 w-5" /> },
-      { name: "Tailwind CSS", icon: <FaCss3Alt className="h-5 w-5" /> },
-      { name: "Markdown", icon: <FaCode className="h-5 w-5" /> },
     ],
   },
   learning: {
@@ -79,8 +80,12 @@ const skillsData = {
     skills: [
       { name: "Next.js", icon: <SiNextdotjs className="h-5 w-5" /> },
       { name: "Firebase Studio", icon: <SiFirebase className="h-5 w-5" /> },
-      { name: "Figma", icon: <FaFigma className="h-5 w-5" /> },
-      { name: "Integraciones IoT", icon: <FaCode className="h-5 w-5" /> },
+      { name: "Tailwind CSS", icon: <FaCss3Alt className="h-5 w-5" /> },
+      { name: "Markdown", icon: <FaCode className="h-5 w-5" /> },
+      { name: "Windows Server", icon: <FaServer className="h-5 w-5" /> },
+      { name: "Caddy", icon: <FaServer className="h-5 w-5" /> },
+      { name: "Vue 3", icon: <FaVuejs className="h-5 w-5" /> },
+      { name: "Vuetify", icon: <SiVuetify className="h-5 w-5" /> },
     ],
   },
 };

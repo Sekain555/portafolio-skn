@@ -74,7 +74,7 @@ export function Services() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {servicesData.map((service) => (
+          {servicesData.slice(0, 3).map((service) => (
             <Card
               key={service.title}
               className="flex flex-col shadow-md hover:shadow-xl hover:border-primary/50 transition-all duration-300"
@@ -104,6 +104,65 @@ export function Services() {
               </CardFooter>
             </Card>
           ))}
+          {/*
+          <Card
+            key="consultoria-tecnica"
+            className="flex flex-col shadow-md hover:shadow-xl hover:border-primary/50 transition-all duration-300"
+          >
+            <CardHeader className="flex flex-col items-start gap-4">
+              <FaFileAlt className="h-10 w-10 text-primary" />
+              <div className="space-y-1">
+                <CardTitle className="text-xl">Consultoría Técnica</CardTitle>
+                <CardDescription>Análisis, documentación y planificación de sistemas.</CardDescription>
+              </div>
+            </CardHeader>
+            <CardContent className="flex-grow">
+              <div className="flex flex-wrap gap-2">
+                {['Arquitectura', 'Documentación', 'Roadmap'].map((tag) => (
+                  <Badge key={tag} variant="outline">
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
+            </CardContent>
+            <CardFooter>
+              <Button asChild className="w-full">
+                <Link href="#contacto">
+                  Solicitar <FaArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </CardFooter>
+          </Card>
+
+          <Card
+            key="soporte-innovacion"
+            className="flex flex-col shadow-md hover:shadow-xl hover:border-primary/50 transition-all duration-300"
+          >
+            <CardHeader className="flex flex-col items-start gap-4">
+              <FaRocket className="h-10 w-10 text-primary" />
+              <div className="space-y-1">
+                <CardTitle className="text-xl">Soporte e Innovación</CardTitle>
+                <CardDescription>Mejora de rendimiento y evolución de proyectos existentes.</CardDescription>
+              </div>
+            </CardHeader>
+            <CardContent className="flex-grow">
+              <div className="flex flex-wrap gap-2">
+                {['Refactor', 'Optimización', 'Deploy'].map((tag) => (
+                  <Badge key={tag} variant="outline">
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
+            </CardContent>
+            <CardFooter>
+              <Button asChild className="w-full">
+                <Link href="#contacto">
+                  Solicitar <FaArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </CardFooter>
+          </Card>
+          */}
         </div>
       </div>
     </section>
