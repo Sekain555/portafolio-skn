@@ -54,8 +54,6 @@ export function ProjectLayout({ project }: { project: Project }) {
           src={projectImage}
           alt={`Cover image for ${project.title}`}
           fill
-          width={896}
-          height={504}
           sizes="(max-width: 768px) 100vw, 896px"
           className="object-cover"
            data-ai-hint="tech application dashboard"
@@ -98,8 +96,6 @@ export function ProjectLayout({ project }: { project: Project }) {
                 src={image}
                 alt={`Project gallery image ${index + 1}`}
                 fill
-                width={600}
-                height={338}
                 sizes="(max-width: 640px) 100vw, 50vw"
                 className="object-cover"
                 data-ai-hint="interface screenshot"
