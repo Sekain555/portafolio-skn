@@ -17,24 +17,62 @@ import {
   FaFigma,
   FaReact,
   FaKey,
-  FaCss3Alt
+  FaCss3Alt,
+  FaMicrochip,
+  FaNodeJs,
+  FaFileCode
 } from "react-icons/fa";
-import { SiFastapi, SiMysql, SiFirebase, SiIonic, SiVuetify, SiArduino, SiNextdotjs } from "react-icons/si";
-import { TbSquareLetterS } from "react-icons/tb";
+import {
+  SiFastapi,
+  SiMysql,
+  SiFirebase,
+  SiIonic,
+  SiVuetify,
+  SiArduino,
+  SiNextdotjs,
+  SiEspressif,
+  SiLvgl,
+  SiCapacitor,
+  SiPostman,
+  SiCaddy,
+  SiXampp,
+  SiTypescript,
+  SiCplusplus
+} from "react-icons/si";
+import { TbSquareLetterN, TbSquareLetterS, TbSquareLetterT } from "react-icons/tb";
+import { VscVscode } from "react-icons/vsc";
 
 const skillsData = {
   main: {
     title: "Habilidades principales",
     icon: <FaBrain className="h-8 w-8 text-primary" />,
-    description: "Tecnologías que domino y uso activamente en proyectos reales.",
+    description:
+      "Tecnologías que domino y uso activamente en proyectos reales.",
     categories: [
+      {
+        title: "Lenguajes de Programación",
+        icon: <FaFileCode className="h-5 w-5 mr-2" />,
+        skills: [
+          { name: "C/C++", icon: <SiCplusplus className="h-5 w-5" /> },
+          { name: "TypeScript", icon: <SiTypescript className="h-5 w-5" /> },
+          { name: "Python", icon: <FaPython className="h-5 w-5" /> },
+        ]
+      },
+      {
+        title: "Bases de Datos",
+        icon: <FaFileCode className="h-5 w-5 mr-2" />,
+        skills: [
+          { name: "Firebase Realtime DB", icon: <SiFirebase className="h-5 w-5" /> },
+          { name: "Firestore", icon: <SiFirebase className="h-5 w-5" /> },
+          { name: "MySQL/MariaDB", icon: <SiMysql className="h-5 w-5" /> },
+          { name: "Neon DB", icon: <TbSquareLetterN className="h-5 w-5" /> },
+        ]
+      },
       {
         title: "Backend",
         icon: <FaServer className="h-5 w-5 mr-2" />,
         skills: [
-          { name: "Python", icon: <FaPython className="h-5 w-5" /> },
           { name: "FastAPI", icon: <SiFastapi className="h-5 w-5" /> },
-          { name: "MySQL/MariaDB", icon: <SiMysql className="h-5 w-5" /> },
           { name: "Firebase", icon: <SiFirebase className="h-5 w-5" /> },
         ],
       },
@@ -43,8 +81,9 @@ const skillsData = {
         icon: <FaDesktop className="h-5 w-5 mr-2" />,
         skills: [
           { name: "Angular", icon: <FaAngular className="h-5 w-5" /> },
+          { name: "Capacitor", icon: <SiCapacitor className="h-5 w-5" /> },
           { name: "Ionic", icon: <SiIonic className="h-5 w-5" /> },
-          
+          { name: "Thunkable X", icon: <TbSquareLetterT className="h-5 w-5" /> },
         ],
       },
       {
@@ -52,25 +91,42 @@ const skillsData = {
         icon: <FaCloud className="h-5 w-5 mr-2" />,
         skills: [
           { name: "Git / GitHub", icon: <FaGitAlt className="h-5 w-5" /> },
-          { name: "Firebase Hosting", icon: <SiFirebase className="h-5 w-5" /> },
+          {
+            name: "Firebase Hosting",
+            icon: <SiFirebase className="h-5 w-5" />,
+          },
         ],
       },
       {
         title: "Embebido/Firmware",
-        icon: <FaCloud className="h-5 w-5 mr-2" />,
+        icon: <FaMicrochip className="h-5 w-5 mr-2" />,
         skills: [
           { name: "Arduino", icon: <SiArduino className="h-5 w-5" /> },
-          { name: "SquareLine Studio", icon: <TbSquareLetterS className="h-5 w-5" />,}
-        ]
+          { name: "ESP32", icon: <SiEspressif className="h-5 w-5" /> },
+          {
+            name: "LVGL",
+            icon: <SiLvgl className="h-5 w-5" />,
+          },
+          {
+            name: "SquareLine Studio",
+            icon: <TbSquareLetterS className="h-5 w-5" />,
+          },
+        ],
       },
     ],
   },
   complementary: {
     title: "Herramientas complementarias",
     icon: <FaCog className="h-8 w-8 text-primary" />,
-    description: "Tecnologías que manejo a nivel intermedio o uso como soporte.",
+    description:
+      "Tecnologías que manejo a nivel intermedio o uso como soporte.",
     skills: [
+      { name: "Caddy", icon: <SiCaddy className="h-5 w-5" /> },
       { name: "JWT Auth", icon: <FaKey className="h-5 w-5" /> },
+      { name: "Node.js", icon: <FaNodeJs className="h-5 w-5" /> },
+      { name: "Postman", icon: <SiPostman className="h-5 w-5" /> },
+      { name: "VS Code", icon: <VscVscode className="h-5 w-5" /> },
+      { name: "Xampp", icon: <SiXampp className="h-5 w-5" /> },
     ],
   },
   learning: {
@@ -78,14 +134,13 @@ const skillsData = {
     icon: <FaLeaf className="h-8 w-8 text-primary" />,
     description: "Tecnologías que estoy integrando o explorando actualmente.",
     skills: [
-      { name: "Next.js", icon: <SiNextdotjs className="h-5 w-5" /> },
       { name: "Firebase Studio", icon: <SiFirebase className="h-5 w-5" /> },
-      { name: "Tailwind CSS", icon: <FaCss3Alt className="h-5 w-5" /> },
       { name: "Markdown", icon: <FaCode className="h-5 w-5" /> },
-      { name: "Windows Server", icon: <FaServer className="h-5 w-5" /> },
-      { name: "Caddy", icon: <FaServer className="h-5 w-5" /> },
+      { name: "Next.js", icon: <SiNextdotjs className="h-5 w-5" /> },
+      { name: "Tailwind CSS", icon: <FaCss3Alt className="h-5 w-5" /> },
       { name: "Vue 3", icon: <FaVuejs className="h-5 w-5" /> },
       { name: "Vuetify", icon: <SiVuetify className="h-5 w-5" /> },
+      { name: "Windows Server", icon: <FaServer className="h-5 w-5" /> },
     ],
   },
 };
@@ -135,8 +190,8 @@ export function Skills() {
             Mi Caja de Herramientas
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            Desde el backend hasta la nube, estas son las tecnologías que uso para
-            dar vida a las ideas.
+            Desde el backend hasta la nube, estas son las tecnologías que uso
+            para dar vida a las ideas.
           </p>
         </div>
 
@@ -170,24 +225,24 @@ export function Skills() {
                   <h4 className="text-2xl font-semibold leading-none tracking-tight">
                     {skillsData.complementary.title}
                   </h4>
-                   <p className="text-muted-foreground mt-1">
+                  <p className="text-muted-foreground mt-1">
                     {skillsData.complementary.description}
                   </p>
                 </div>
               </CardHeader>
               <CardContent>
-                 <div className="flex flex-wrap gap-2">
-                    {skillsData.complementary.skills.map((skill) => (
-                      <Badge
-                        key={skill.name}
-                        variant="secondary"
-                        className="flex items-center gap-2 py-1 px-3"
-                      >
-                        {skill.icon}
-                        <span>{skill.name}</span>
-                      </Badge>
-                    ))}
-                  </div>
+                <div className="flex flex-wrap gap-2">
+                  {skillsData.complementary.skills.map((skill) => (
+                    <Badge
+                      key={skill.name}
+                      variant="secondary"
+                      className="flex items-center gap-2 py-1 px-3"
+                    >
+                      {skill.icon}
+                      <span>{skill.name}</span>
+                    </Badge>
+                  ))}
+                </div>
               </CardContent>
             </Card>
 
@@ -199,24 +254,24 @@ export function Skills() {
                   <h4 className="text-2xl font-semibold leading-none tracking-tight">
                     {skillsData.learning.title}
                   </h4>
-                   <p className="text-muted-foreground mt-1">
+                  <p className="text-muted-foreground mt-1">
                     {skillsData.learning.description}
                   </p>
                 </div>
               </CardHeader>
               <CardContent>
-                 <div className="flex flex-wrap gap-2">
-                    {skillsData.learning.skills.map((skill) => (
-                      <Badge
-                        key={skill.name}
-                        variant="secondary"
-                        className="flex items-center gap-2 py-1 px-3"
-                      >
-                        {skill.icon}
-                        <span>{skill.name}</span>
-                      </Badge>
-                    ))}
-                  </div>
+                <div className="flex flex-wrap gap-2">
+                  {skillsData.learning.skills.map((skill) => (
+                    <Badge
+                      key={skill.name}
+                      variant="secondary"
+                      className="flex items-center gap-2 py-1 px-3"
+                    >
+                      {skill.icon}
+                      <span>{skill.name}</span>
+                    </Badge>
+                  ))}
+                </div>
               </CardContent>
             </Card>
           </div>

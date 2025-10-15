@@ -5,22 +5,17 @@ import { FaGithub, FaLinkedin, FaThreads, FaEnvelope } from "react-icons/fa6";
 
 const socialLinksData = [
   {
-    href: "https://github.com/sekain",
+    href: "https://github.com/Sekain555",
     icon: FaGithub,
     label: "GitHub",
   },
   {
-    href: "https://www.linkedin.com/in/victor-sepulveda-developer/",
+    href: "https://www.linkedin.com/in/skn555/",
     icon: FaLinkedin,
     label: "LinkedIn",
   },
   {
-    href: "https://www.threads.net/@sekain.dev",
-    icon: FaThreads,
-    label: "Threads",
-  },
-  {
-    href: "mailto:victor.sepulveda.c@outlook.com",
+    href: "mailto:antonio.rms30@gmail.com",
     icon: FaEnvelope,
     label: "Correo",
   }

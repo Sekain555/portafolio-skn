@@ -1,40 +1,38 @@
 {
-  "placeholderImages": [
-    {
-      "id": "project-rucaray",
-      "description": "A dashboard for a tech support ticket system.",
-      "imageUrl": "https://picsum.photos/seed/rucaray-dashboard/600/400",
-      "imageHint": "support dashboard"
+  "projects": {
+    "rucaray": {
+      "images": [
+        "/projects/rucaray/cover.png",
+        "/projects/rucaray/gallery-1.png",
+        "/projects/rucaray/gallery-2.png"
+      ]
     },
-    {
-      "id": "project-techflow",
-      "description": "A mobile app interface for a field service management platform.",
-      "imageUrl": "https://picsum.photos/seed/techflow-app/600/400",
-      "imageHint": "service app"
+    "techflow": {
+      "images": [
+        "/projects/techflow/cover.png",
+        "/projects/techflow/gallery-1.png"
+      ]
     },
-    {
-      "id": "project-ride-in",
-      "description": "An IoT device for motorcycles connected to the cloud.",
-      "imageUrl": "https://picsum.photos/seed/ride-in-iot/600/400",
-      "imageHint": "motorcycle iot"
+    "ride-in": {
+      "images": [
+        "/projects/ride-in/cover.png",
+        "/projects/ride-in/gallery-1.png",
+        "/projects/ride-in/gallery-2.png"
+      ]
     },
-    {
-      "id": "project-contatrack",
-      "description": "A web application for accounting data visualization.",
-      "imageUrl": "https://picsum.photos/seed/contatrack-viz/600/400",
-      "imageHint": "accounting dashboard"
+    "contatrack": {
+      "images": [
+        "/projects/contatrack/cover.png"
+      ]
     },
-    {
-      "id": "project-ride-in-subsystems",
-      "description": "An embedded system UI for a motorcycle console.",
-      "imageUrl": "https://picsum.photos/seed/ride-in-console/600/400",
-      "imageHint": "embedded ui"
-    },
-    {
-      "id": "project-elite7fc",
-      "description": "A concept UI for a fantasy football mobile game.",
-      "imageUrl": "https://picsum.photos/seed/elite7fc-concept/600/400",
-      "imageHint": "game ui"
+    "ride-in-subsystems": {
+      "images": [
+        "/projects/ride-in-subsystems/cover.png",
+        "/projects/ride-in-subsystems/gallery-1.png"
+      ]
     }
-  ]
+  },
+  "projectLayout": {
+    "cover": "https://picsum.photos/seed/projectlayout/896/504"
+  }
 }

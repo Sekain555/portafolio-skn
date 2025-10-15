@@ -13,11 +13,11 @@ import { getProjectNeighbors } from "@/lib/projects";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Chip } from "@/components/chip";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
+import images from "@/lib/placeholder-images.json";
 
 export function ProjectLayout({ project }: { project: Project }) {
   const { prev, next } = getProjectNeighbors(project.slug);
-  const projectImage = PlaceHolderImages.find(p => p.id === `project-${project.slug}`)?.imageUrl || "https://picsum.photos/1200/600";
+  const projectImage = project.images[0] || images.projectLayout.cover;
 
   return (
     <div className="max-w-4xl mx-auto space-y-16 mt-8">
@@ -54,6 +54,8 @@ export function ProjectLayout({ project }: { project: Project }) {
           src={projectImage}
           alt={`Cover image for ${project.title}`}
           fill
+          width={896}
+          height={504}
           sizes="(max-width: 768px) 100vw, 896px"
           className="object-cover"
            data-ai-hint="tech application dashboard"
@@ -67,6 +69,13 @@ export function ProjectLayout({ project }: { project: Project }) {
         <p className="text-muted-foreground">{project.role}</p>
       </section>
 
+       <section aria-labelledby="description-title">
+        <h2 id="description-title" className="text-2xl font-bold mb-4">
+          Descripción del Proyecto
+        </h2>
+        <p className="text-muted-foreground">{project.description}</p>
+      </section>
+
       <section aria-labelledby="features-title">
         <h2 id="features-title" className="text-2xl font-bold mb-4">
           Características Clave
@@ -76,6 +85,31 @@ export function ProjectLayout({ project }: { project: Project }) {
             <li key={index}>{feature}</li>
           ))}
         </ul>
+      </section>
+
+       <section aria-labelledby="gallery-title">
+        <h2 id="gallery-title" className="text-2xl font-bold mb-4">
+          Galería del Proyecto
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {project.images.slice(1).map((image, index) => (
+            <div key={index} className="relative aspect-video rounded-lg overflow-hidden border">
+              <Image
+                src={image}
+                alt={`Project gallery image ${index + 1}`}
+                fill
+                width={600}
+                height={338}
+                sizes="(max-width: 640px) 100vw, 50vw"
+                className="object-cover"
+                data-ai-hint="interface screenshot"
+              />
+            </div>
+          ))}
+        </div>
+        {project.images.length <= 1 && (
+            <p className="text-muted-foreground">No hay imágenes adicionales en la galería.</p>
+        )}
       </section>
       
        <section aria-labelledby="tech-stack-title">

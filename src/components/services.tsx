@@ -30,25 +30,19 @@ const servicesData = [
     icon: <FaMicrochip className="h-10 w-10 text-primary" />,
     title: 'Integraciones IoT',
     description: 'Conexión hardware–software con ESP32 y Arduino.',
-    tags: ['ESP32', 'Arduino', 'UART/I2C/SPI'],
+    tags: ['ESP32', 'Arduino'],
   },
   {
     icon: <FaServer className="h-10 w-10 text-primary" />,
     title: 'APIs y Automatización',
     description: 'Backends escalables y conectividad entre sistemas.',
-    tags: ['Python', 'FastAPI', 'Flask', 'REST/JSON'],
+    tags: ['Python', 'FastAPI', 'REST/JSON'],
   },
   {
     icon: <FaFileAlt className="h-10 w-10 text-primary" />,
     title: 'Consultoría Técnica',
     description: 'Análisis, documentación y planificación de sistemas.',
     tags: ['Arquitectura', 'Documentación', 'Roadmap'],
-  },
-  {
-    icon: <FaRocket className="h-10 w-10 text-primary" />,
-    title: 'Soporte e Innovación',
-    description: 'Mejora de rendimiento y evolución de proyectos existentes.',
-    tags: ['Refactor', 'Optimización', 'Deploy'],
   },
 ];
 

@@ -4,14 +4,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { getProjects } from "@/lib/projects";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { FaArrowRight } from "react-icons/fa";
 
 export function Projects() {
   const projects = getProjects();
-  const projectImages = new Map(
-    PlaceHolderImages.map((img) => [img.id, img.imageUrl])
-  );
 
   return (
     <section
@@ -42,7 +38,7 @@ export function Projects() {
               <CardHeader>
                 <div className="relative h-48 w-full">
                   <Image
-                    src={projectImages.get(`project-${project.slug}`) || "https://picsum.photos/600/400"}
+                    src={project.images[0]}
                     alt={project.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
