@@ -24,12 +24,6 @@
       "images": [
         "/projects/contatrack/cover.png"
       ]
-    },
-    "ride-in-subsystems": {
-      "images": [
-        "/projects/ride-in-subsystems/cover.png",
-        "/projects/ride-in-subsystems/gallery-1.png"
-      ]
     }
   },
   "projectLayout": {

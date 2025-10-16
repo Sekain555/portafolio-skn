@@ -32,13 +32,23 @@ export function ProjectLayout({ project }: { project: Project }) {
         </div>
         <p className="text-lg text-muted-foreground">{project.summary}</p>
         <div className="flex flex-wrap items-center gap-4">
-          {project.links.repo && (
-            <Button variant="outline" asChild>
-              <Link href={project.links.repo} target="_blank">
-                <FaGithub className="mr-2 h-4 w-4" /> Repositorio
-              </Link>
-            </Button>
-          )}
+          {project.links.repo &&
+            (Array.isArray(project.links.repo) ? (
+              project.links.repo.map((repoUrl, index) => (
+                <Button variant="outline" asChild key={repoUrl}>
+                  <Link href={repoUrl} target="_blank">
+                    <FaGithub className="mr-2 h-4 w-4" />
+                    Repositorio {index === 0 ? 'Frontend' : 'Backend'}
+                  </Link>
+                </Button>
+              ))
+            ) : (
+              <Button variant="outline" asChild>
+                <Link href={project.links.repo} target="_blank">
+                  <FaGithub className="mr-2 h-4 w-4" /> Repositorio
+                </Link>
+              </Button>
+            ))}
           {project.links.demo && (
             <Button asChild>
               <Link href={project.links.demo} target="_blank">
@@ -47,6 +57,16 @@ export function ProjectLayout({ project }: { project: Project }) {
             </Button>
           )}
         </div>
+         <section aria-labelledby="tech-stack-title" className="pt-4">
+          <h2 id="tech-stack-title" className="text-xl font-bold mb-4 sr-only">
+            Tecnologías Utilizadas
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            {project.stack.map((tech) => (
+              <Chip key={tech}>{tech}</Chip>
+            ))}
+          </div>
+        </section>
       </header>
 
       <div className="relative w-full aspect-video rounded-lg overflow-hidden border shadow-lg">
@@ -108,17 +128,6 @@ export function ProjectLayout({ project }: { project: Project }) {
         )}
       </section>
       
-       <section aria-labelledby="tech-stack-title">
-        <h2 id="tech-stack-title" className="text-2xl font-bold mb-4">
-          Tecnologías Utilizadas
-        </h2>
-        <div className="flex flex-wrap gap-2">
-          {project.stack.map((tech) => (
-            <Chip key={tech}>{tech}</Chip>
-          ))}
-        </div>
-      </section>
-
       <footer className="border-t pt-8 mt-16">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
            <Button variant="outline" asChild>
