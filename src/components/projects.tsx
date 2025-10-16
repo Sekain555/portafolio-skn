@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { getProjects } from "@/lib/projects";
 import { FaArrowRight } from "react-icons/fa";
+import { TechIcon } from "./tech-icon";
 
 export function Projects() {
   const projects = getProjects();
@@ -57,10 +58,11 @@ export function Projects() {
                 <p className="text-muted-foreground text-sm mb-4 flex-grow">
                   {project.summary}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap items-center gap-2 mb-4">
                   {project.stack.slice(0, 3).map((tech) => (
-                    <Badge key={tech} variant="outline">
-                      {tech}
+                    <Badge key={tech} variant="outline" className="flex items-center gap-1.5">
+                       <TechIcon tech={tech} />
+                      <span>{tech}</span>
                     </Badge>
                   ))}
                   {project.stack.length > 3 && (

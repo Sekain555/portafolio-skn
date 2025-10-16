@@ -14,6 +14,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Chip } from "@/components/chip";
 import images from "@/lib/placeholder-images.json";
+import { TechIcon } from "./tech-icon";
 
 export function ProjectLayout({ project }: { project: Project }) {
   const { prev, next } = getProjectNeighbors(project.slug);
@@ -63,7 +64,10 @@ export function ProjectLayout({ project }: { project: Project }) {
           </h2>
           <div className="flex flex-wrap gap-2">
             {project.stack.map((tech) => (
-              <Chip key={tech}>{tech}</Chip>
+              <Chip key={tech} className="flex items-center gap-2">
+                <TechIcon tech={tech} />
+                <span>{tech}</span>
+              </Chip>
             ))}
           </div>
         </section>
