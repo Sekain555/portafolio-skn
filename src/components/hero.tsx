@@ -36,7 +36,7 @@ export function Hero() {
             </div>
             <div className="mt-10 flex gap-6 justify-center lg:justify-start">
               <Link
-                href="https://github.com/vicho-s"
+                href="https://github.com/Sekain555"
                 target="_blank"
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 aria-label="Perfil de Github"
@@ -44,7 +44,7 @@ export function Hero() {
                 <Github className="h-7 w-7" />
               </Link>
               <Link
-                href="https://www.linkedin.com/in/victorsepulvedasala/"
+                href="https://www.linkedin.com/in/skn555/"
                 target="_blank"
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 aria-label="Perfil de LinkedIn"
