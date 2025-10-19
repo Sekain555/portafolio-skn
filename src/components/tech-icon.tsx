@@ -7,7 +7,7 @@ import {
   SiArduino,
   SiVuetify,
 } from 'react-icons/si';
-import { IoIonic } from "react-icons/io5";
+import { IoLogoIonic } from "react-icons/io5";
 
 type TechIconProps = {
   tech: string;
@@ -16,7 +16,7 @@ type TechIconProps = {
 
 const iconMap: Record<string, React.ElementType> = {
   Angular: FaAngular,
-  Ionic: IoIonic,
+  Ionic: IoLogoIonic,
   FastAPI: SiFastapi,
   'MySQL/MariaDB': SiMysql,
   Python: FaPython,

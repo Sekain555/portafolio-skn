@@ -21,7 +21,7 @@ export function About() {
         </div>
         <div className="mt-12 space-y-6 text-muted-foreground text-lg text-justify">
           <p>
-            Soy Víctor Sepúlveda, ingeniero y programador chileno con una
+            Soy Víctor Sepúlveda, programador con una
             profunda pasión por el desarrollo de sistemas y la innovación
             tecnológica. Mi camino comenzó con la curiosidad de entender cómo
             funcionan las cosas, y hoy esa misma curiosidad me impulsa a diseñar

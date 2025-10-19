@@ -1,5 +1,8 @@
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const contactSchema = z.object({
   name: z.string().min(2, 'El nombre es requerido.'),
@@ -20,44 +23,38 @@ export async function POST(request: Request) {
     }
 
     const { name, email, message } = parsed.data;
+    const toEmail = process.env.CONTACT_EMAIL_TO;
 
-    // TODO: Integrar reCAPTCHA v3 para verificar el token
-    // const recaptchaToken = body.recaptchaToken;
-    // const secretKey = process.env.RECAPTCHA_SECRET;
-    // if (!secretKey || !recaptchaToken) {
-    //   console.warn("reCAPTCHA no está configurado.");
-    // } else {
-    //   const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptchaToken}`;
-    //   const response = await fetch(verificationUrl, { method: "POST" });
-    //   const verificationData = await response.json();
-    //   if (!verificationData.success || verificationData.score < 0.5) {
-    //     return NextResponse.json({ ok: false, error: 'Falló la verificación reCAPTCHA.' }, { status: 403 });
-    //   }
-    // }
+    if (!process.env.RESEND_API_KEY) {
+      console.error('La clave de API de Resend no está configurada.');
+      return NextResponse.json({ ok: false, error: 'El servidor no está configurado para enviar correos.' }, { status: 500 });
+    }
 
-    console.log('Nuevo mensaje de contacto recibido:');
-    console.log({ name, email, message });
+    if (!toEmail) {
+      console.error('El correo de destino no está configurado.');
+      return NextResponse.json({ ok: false, error: 'El servidor no está configurado para recibir correos.' }, { status: 500 });
+    }
 
-    // TODO: Guardar en Firestore si está configurado
-    // if (process.env.FIREBASE_CONFIG) {
-    //   try {
-    //     // const { db } = await initializeFirebaseAdmin();
-    //     // await db.collection('contacts').add({
-    //     //   name,
-    //     //   email,
-    //     //   message,
-    //     //   createdAt: new Date(),
-    //     // });
-    //     console.log('Mensaje guardado en Firestore (simulación).');
-    //   } catch (dbError) {
-    //     console.error('Error al guardar en Firestore:', dbError);
-    //     // No fallar la solicitud si solo la base de datos falla
-    //   }
-    // }
+    const { data, error } = await resend.emails.send({
+      from: 'Portfolio Contact <onboarding@resend.dev>', // Dominio de envío de Resend
+      to: toEmail, 
+      subject: `Nuevo mensaje de ${name} desde tu portafolio`,
+      reply_to: email,
+      html: `
+        <p>Has recibido un nuevo mensaje de tu formulario de contacto.</p>
+        <p><strong>Nombre:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Mensaje:</strong></p>
+        <p>${message}</p>
+      `,
+    });
 
+    if (error) {
+      console.error('Error al enviar el correo:', error);
+      return NextResponse.json({ ok: false, error: 'Hubo un problema al enviar el correo.' }, { status: 500 });
+    }
 
-    // Por ahora, solo devolvemos una respuesta exitosa
-    return NextResponse.json({ ok: true, message: 'Mensaje recibido correctamente.' });
+    return NextResponse.json({ ok: true, message: 'Mensaje enviado correctamente.' });
 
   } catch (error) {
     console.error('Error en el endpoint de contacto:', error);

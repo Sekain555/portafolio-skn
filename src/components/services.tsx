@@ -24,7 +24,7 @@ const servicesData = [
     icon: <FaGlobe className="h-10 w-10 text-primary" />,
     title: 'Desarrollo Web y Móvil',
     description: 'Aplicaciones modernas, responsivas y optimizadas.',
-    tags: ['Angular', 'Ionic', 'Vue', 'Vite', 'Vuetify'],
+    tags: ['Angular', 'Ionic', 'Firebase'],
   },
   {
     icon: <FaMicrochip className="h-10 w-10 text-primary" />,

@@ -1,61 +1,81 @@
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-
-const socialLinks = [
-  {
-    href: "https://github.com/Sekain555",
-    icon: FaGithub,
-    label: "GitHub",
-  },
-  {
-    href: "https://www.linkedin.com/in/skn555",
-    icon: FaLinkedin,
-    label: "LinkedIn",
-  },
-];
+import { ArrowRight, Github, Linkedin, Twitter } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export function Hero() {
   return (
     <section
-      id="inicio"
-      aria-labelledby="hero-title"
-      className="relative w-full h-screen min-h-[700px] flex items-center justify-center scroll-mt-20"
+      id="hero"
+      className="relative min-h-[90vh] overflow-hidden py-24 sm:py-32 lg:py-40 scroll-mt-20"
     >
-      <div className="absolute inset-0 bg-grid-slate-900/[0.04] bg-[bottom_1px_center] dark:bg-grid-slate-400/[0.05] dark:bg-bottom dark:border-b dark:border-slate-100/5 [mask-image:linear-gradient(to_bottom,transparent,black)]"></div>
-       <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
-      <div className="container mx-auto px-4 md:px-6 text-center">
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <h1 id="hero-title" className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight">
-            Víctor Sepúlveda Brito (Sekain)
-          </h1>
-          <p className="mt-4 md:mt-6 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground">
-          Programador e ingeniero chileno que convierte ideas en sistemas funcionales, fusionando lógica, diseño y experiencia de usuario.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center items-center gap-4">
-            {socialLinks.map((link) => (
-              <Button
-                key={link.label}
-                variant="outline"
-                size="icon"
-                asChild
-                className="w-12 h-12 rounded-full"
-              >
-                <Link
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={link.label}
-                >
-                  <link.icon className="h-6 w-6" />
-                </Link>
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Columna de Texto */}
+          <div className="max-w-xl text-center lg:text-left">
+            <p className="text-lg font-semibold text-primary tracking-wider">
+              VÍCTOR SEPÚLVEDA "SEKAIN"
+            </p>
+            <h1 className="mt-2 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
+              Desarrollador Full-Stack y Analista de Sistemas
+            </h1>
+            <p className="mt-6 text-lg sm:text-xl text-muted-foreground">
+              Apasionado por transformar ideas en soluciones de software robustas y
+              escalables. Mi objetivo es construir tecnología que sea tan elegante
+              en su interior como intuitiva en su uso.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
+              <Button size="lg" asChild>
+                <a href="#proyectos">
+                  Ver Mis Proyectos <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
               </Button>
-            ))}
-             <Button size="lg" asChild className="rounded-full">
-              <Link href="#contacto">
-                Contáctame
+              <Button size="lg" variant="outline" asChild>
+                <a href="#contacto">Contáctame</a>
+              </Button>
+            </div>
+            <div className="mt-10 flex gap-6 justify-center lg:justify-start">
+              <Link
+                href="https://github.com/vicho-s"
+                target="_blank"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="Perfil de Github"
+              >
+                <Github className="h-7 w-7" />
               </Link>
-            </Button>
+              <Link
+                href="https://www.linkedin.com/in/victorsepulvedasala/"
+                target="_blank"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="Perfil de LinkedIn"
+              >
+                <Linkedin className="h-7 w-7" />
+              </Link>
+              {/* Si tienes Twitter, puedes descomentar esto */}
+              {/* 
+              <Link
+                href="#"
+                target="_blank"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="Perfil de Twitter"
+              >
+                <Twitter className="h-7 w-7" />
+              </Link>
+              */}
+            </div>
+          </div>
+
+          {/* Columna de Imagen */}
+          <div className="relative h-[50vh] lg:h-full flex items-center justify-center">
+            <div className="w-full max-w-sm lg:max-w-none lg:w-[500px] h-full lg:h-[750px] relative">
+               <Image
+                src="/profile-image.png"
+                alt="Ilustración de perfil de Víctor Sepúlveda"
+                fill
+                className="object-contain object-bottom [mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)]"
+                priority
+              />
+            </div>
           </div>
         </div>
       </div>

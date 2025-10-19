@@ -4,25 +4,56 @@
       "images": [
         "/projects/rucaray/cover.png",
         "/projects/rucaray/gallery-1.png",
-        "/projects/rucaray/gallery-2.png"
+        "/projects/rucaray/gallery-2.png",
+        "/projects/rucaray/gallery-3.png",
+        "/projects/rucaray/gallery-4.png",
+        "/projects/rucaray/gallery-5.png",
+        "/projects/rucaray/gallery-6.png",
+        "/projects/rucaray/gallery-7.png"
       ]
     },
     "techflow": {
       "images": [
         "/projects/techflow/cover.png",
-        "/projects/techflow/gallery-1.png"
+        "/projects/techflow/gallery-1.png",
+        "/projects/techflow/gallery-3.png",
+        "/projects/techflow/gallery-2.png",
+        "/projects/techflow/gallery-4.png",
+        "/projects/techflow/gallery-5.png",
+        "/projects/techflow/gallery-6.png",
+        "/projects/techflow/gallery-7.png",
+        "/projects/techflow/gallery-8.png",
+        "/projects/techflow/gallery-9.png",
+        "/projects/techflow/gallery-10.png",
+        "/projects/techflow/gallery-11.png",
+        "/projects/techflow/gallery-12.png",
+        "/projects/techflow/gallery-13.png",
+        "/projects/techflow/gallery-14.png",
+        "/projects/techflow/gallery-15.png",
+        "/projects/techflow/gallery-16.png",
+        "/projects/techflow/gallery-17.png",
+        "/projects/techflow/gallery-18.png",
+        "/projects/techflow/gallery-19.png"
       ]
     },
     "ride-in": {
       "images": [
         "/projects/ride-in/cover.png",
         "/projects/ride-in/gallery-1.png",
-        "/projects/ride-in/gallery-2.png"
+        "/projects/ride-in/gallery-3.png",
+        "/projects/ride-in/gallery-2.png",
+        "/projects/ride-in/gallery-4.png",
+        "/projects/ride-in/gallery-5.png",
+        "/projects/ride-in/gallery-6.png"
       ]
     },
     "contatrack": {
       "images": [
-        "/projects/contatrack/cover.png"
+        "/projects/contatrack/cover.png",
+        "/projects/contatrack/gallery-1.png",
+        "/projects/contatrack/gallery-3.png",
+        "/projects/contatrack/gallery-2.png",
+        "/projects/contatrack/gallery-4.png"
       ]
     }
   },
